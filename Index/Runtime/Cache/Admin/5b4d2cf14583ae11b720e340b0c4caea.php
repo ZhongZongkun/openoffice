@@ -1,0 +1,151 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+	<title>会议列表</title>
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css">
+	<script src="__PUBLIC__/js/jquery-2.2.2.min.js"></script>
+	<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="" id="styleCss">
+	<link rel="stylesheet" href="__PUBLIC__/css/index.css" />
+	<style type="text/css">
+
+</style>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/scrollable.js"></script>
+<script>
+
+	window.onload = function() {
+	    reSize();
+	    window.onresize = throttle(reSize,300);
+	}
+	
+	function client() {
+		if (window.innerwidth != null) {
+			return {
+				width:window.innerwidth,
+				height:window.innerHeigh
+			}
+		}
+		else if (document.compatMode === "CSS1Compet") {
+			return {
+				width:document.documentElement.clientWidth,
+				Height:document.documentElement.clientHeight
+			}
+		}
+		else {
+			return {
+				width:document.body.clientWidth,
+				height:document.body.clientHeight
+			}
+		}
+	}
+
+	function throttle(fn,delay) {
+		var timer = null;
+		return function() {
+			clearTimeout(timer);
+			timer = setTimeout(fn,delay);
+		}
+	}
+	
+
+	function reSize() {
+		var clientWidth = client().width;
+		if (clientWidth < 1300) {
+			document.body.style.backgroundColor = "#FFF";
+			styleCss.href = "__PUBLIC__/css/1200px.css";
+		}
+		else {
+			document.body.style.backgroundColor = "#FFF"
+			styleCss.href = "__PUBLIC__/css/1920px.css";
+		}
+		console.log(client().width);
+	}
+	</script>
+	<style type="text/css">
+		html,body {
+			width: 100%;
+			height: 100%;
+
+		}
+		.list h1{
+			width: 100%;
+			position: absolute;
+			top: -125px;
+			text-align: center;
+			color: #ece8e8;
+			font-weight: 600;
+			letter-spacing: 7px;
+			font-size: 45px;
+			font-family: 'MicrosoftYaHei'
+		}
+		.list {
+			border-top: 5px solid #ddd;
+		}
+		
+		
+		.list ul li {
+			width: 100%;
+			height: 60px;
+			font-size: 40px;
+			margin-top: 30px;
+			padding-left: 30px;
+			border-bottom: 1px solid #d0c6c6;
+			background: url('__PUBLIC__/images/logo2.png') left center no-repeat;
+		}
+		.list ul li:hover{
+			cursor: pointer;
+			background-color: #ddd;
+		}
+
+		.list ul li span {
+			float: right;
+		}
+		tr {
+			border-bottom: 1px solid #c0c0c0;
+		}
+		td {
+			font-size: 15px;
+		}
+		.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+			padding: 4px;
+		}
+	</style>
+</head>
+<body>
+<input type="hidden" id="user_yiti_url" value="<?php echo U('Admin/User/user_yiti');?>" />
+	<div class="bg-box"></div>
+	<div class="list" style="width:100%;  height:400px;  font-size:18px; margin:0 auto; position:relative; ">
+		<h1><?php echo ($hui); ?><br/><?php echo ($yi); ?></h1>
+		<div class="modal-body">
+	        	  <table class="table table-striped" id="user_list" >
+		       			<tr class="active" style="font-weight:bold;">
+							<td style="width: 50px;text-align:center;">序号</td>
+							<td style="min-width: 25px;text-align:center;">议题</td>
+							<td style="min-width: 70px;text-align:center;">提议人</td>
+							<td style="min-width: 90px;text-align:center;text-align:center;">汇报单位</td>
+							<td style="min-width: 70px;text-align:center;">汇报人</td>
+							<td style="text-align:center;">列席单位</td>
+							<td style="text-align:center;">列席人</td>
+			       		</tr>
+			       		<?php if(is_array($yiti)): foreach($yiti as $key=>$v): ?><tr>
+							<td style="text-align:center"><?php echo ($v["xuhao"]); ?></td>
+							<td style="text-align:center"><a href="<?php echo U('Admin/User/info',array('id'=>$v['id']));?>" target="_self"><?php echo ($v["yitiname"]); ?></a></td>
+							<td style="text-align:center"><?php echo ($v["tiyiren"]); ?></td>
+							<td style="text-align:center"><?php echo ($v["huibaodanwei"]); ?></td>
+							<td style="text-align:center"><?php echo ($v["huibaoren"]); ?></td>
+							<td style="text-align:center"><?php echo ($v["liexidanwei"]); ?></td>
+							<td style="text-align:center"><?php echo ($v["liexiren"]); ?></td>
+			       		</tr><?php endforeach; endif; ?>			       		
+				</table>
+	      </div>
+	</div>
+
+ 
+
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,
+textarea,p,blockquote,th,td { 
+    margin:0;
+    padding:0;
+    font-size:25px;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,img { 
+    border:0;
+    vertical-align: top;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-style:normal;
+    font-weight:normal;
+}
+ol,ul {
+    list-style:none;
+}
+caption,th {
+    text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:normal;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border:0;
+}
+
+.m-header {
+    height: 100px;
+    border-r
+}
+.tab-content {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+}
+body {
+    background-color: #ddd;
+}
+
+.list ul li a {
+        font-size: 20px;
+        color: #323232!important;
+    }
+
+    .btn {
+        border-radius: hidden;
+    }
+
+    #btn-sel-all {
+        width: 40px;
+        height: 36px; 
+        display: block;
+       
+        background: url(../images/jl.png) -80px 0 no-repeat;
+        cursor: pointer;
+    }
+    #img-btn-sel-all {
+        width: 40px;
+        height: 36px; 
+        display: block;
+       
+        background: url(../images/jl.png) -80px 0 no-repeat;
+        cursor: pointer;
+    }
+     #xiubtn-sel-all {
+        width: 40px;
+        height: 36px; 
+        display: block;
+       
+        background: url(../images/jl.png) -80px 0 no-repeat;
+        cursor: pointer;
+    }
+     #xiubtn-sel-all-img {
+        width: 40px;
+        height: 36px; 
+        display: block;
+       
+        background: url(../images/jl.png) -80px 0 no-repeat;
+        cursor: pointer;
+    }
+    #btn-sel-none {
+         width: 40px;
+        height: 36px; 
+        display: block;
+       
+        background: url(../images/jl.png) -80px -48px no-repeat;
+        cursor: pointer;
+    }
+    #img-btn-sel-none {
+         width: 40px;
+        height: 36px; 
+        display: block;
+       
+        background: url(../images/jl.png) -80px -48px no-repeat;
+        cursor: pointer;
+    }
+     #xiubtn-sel-none {
+         width: 40px;
+        height: 36px; 
+        display: block;
+       
+        background: url(../images/jl.png) -80px -48px no-repeat;
+        cursor: pointer;
+    }
+     #xiubtn-sel-none-img {
+         width: 40px;
+        height: 36px; 
+        display: block;
+       
+        background: url(../images/jl.png) -80px -48px no-repeat;
+        cursor: pointer;
+    }
+    
+    
+
+
+    #btn-back {
+         width: 40px;
+        height: 36px; 
+        display: block;
+       
+        background: url(../images/jl.png) 5px -48px no-repeat;
+        cursor: pointer;
+    }
+    #img-btn-back {
+         width: 40px;
+        height: 36px; 
+        display: block;
+       
+        background: url(../images/jl.png) 5px -48px no-repeat;
+        cursor: pointer;
+    }
+     #xiubtn-back {
+         width: 40px;
+        height: 36px; 
+        display: block;
+       
+        background: url(../images/jl.png) 5px -48px no-repeat;
+        cursor: pointer;
+    }
+    #xiubtn-back-img {
+         width: 40px;
+        height: 36px; 
+        display: block;
+       
+        background: url(../images/jl.png) 5px -48px no-repeat;
+        cursor: pointer;
+    }
+
+    #btn-sel {
+         width: 40px;
+        height: 36px; 
+        display: block;
+       
+        background: url(../images/jl.png) 5px 0px no-repeat;
+        cursor: pointer;
+    } 
+      #img-btn-sel {
+         width: 40px;
+        height: 36px; 
+        display: block;
+       
+        background: url(../images/jl.png) 5px 0px no-repeat;
+        cursor: pointer;
+    } 
+    #xiubtn-sel {
+         width: 40px;
+        height: 36px; 
+        display: block;
+       
+        background: url(../images/jl.png) 5px 0px no-repeat;
+        cursor: pointer;
+    }
+    #xiubtn-sel-img {
+         width: 40px;
+        height: 36px; 
+        display: block;
+       
+        background: url(../images/jl.png) 5px 0px no-repeat;
+        cursor: pointer;
+    }
+
+    .modal-body {
+        padding: 0;
+    }
+
+        #boxx {
+            height: 500px;
+            background-color: #efeded;
+            margin: 30px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        #box-content {
+            width: 2700px;
+            height: 500px;
+            position: absolute;
+        }
+        #box-content ul {
+            list-style-type: none ;
+        }
+        #box-content ul li {
+            width: 900px;
+            height: 500px;
+            float: left;
+            padding: 20px 0 0 10px;
+        }
+
+        #yitilist td {
+            max-width: 50px;
+        }
+
+        #yitilist input {
+        }
